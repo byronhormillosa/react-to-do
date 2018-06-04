@@ -26,15 +26,13 @@ class App extends Component {
      this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });
    }
 
-   }
-   
     toggleComplete(index) {
     const todos = this.state.todos.slice();
     const todo = todos[index];
     todo.isCompleted = todo.isCompleted ? false : true;
     this.setState({ todos: todos });
   }
-    
+          
   render() {
     return (
       <div className="App">
